@@ -8,8 +8,8 @@ from datetime import datetime
 app = Flask(__name__)
 
 # Configuration
-DISCORD_CLIENT_ID = os.environ.get('DISCORD_CLIENT_ID')
-DISCORD_CLIENT_SECRET = os.environ.get('DISCORD_CLIENT_SECRET')
+DISCORD_CLIENT_ID = "1482471026448142486"
+DISCORD_CLIENT_SECRET = "NBazmlKbXjQGy3S4-USFUw8d_3Iez647"
 REDIRECT_URI = os.environ.get('REDIRECT_URI', 'https://ton-app.vercel.app/callback')
 
 # Chemin du fichier JSON (dans /tmp car Vercel est en lecture seule)
