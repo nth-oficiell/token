@@ -9,7 +9,7 @@ app = Flask(__name__)
 # TES IDENTIFIANTS DIRECTEMENT ICI
 DISCORD_CLIENT_ID = "1482471026448142486"  # Remplace par ton vrai client ID
 DISCORD_CLIENT_SECRET = "NBazmlKbXjQGy3S4-USFUw8d_3Iez647"  # Remplace par ton vrai client secret
-REDIRECT_URI = "https://ton-app.vercel.app/callback"  # Remplace par ton URL Vercel
+REDIRECT_URI = "https://token5-pi.vercel.app/"  # Remplace par ton URL Vercel
 
 # Chemin du fichier JSON (dans /tmp car Vercel est en lecture seule)
 DATA_FILE = '/tmp/users.json'
