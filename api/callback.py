@@ -1,16 +1,15 @@
 from flask import Flask, request, jsonify
 import requests
-import os
 import json
 import time
 from datetime import datetime
 
 app = Flask(__name__)
 
-# Configuration
-DISCORD_CLIENT_ID = "1482471026448142486"
-DISCORD_CLIENT_SECRET = "NBazmlKbXjQGy3S4-USFUw8d_3Iez647"
-REDIRECT_URI = 'https://ton-app.vercel.app/callback'
+# TES IDENTIFIANTS DIRECTEMENT ICI
+DISCORD_CLIENT_ID = "1482471026448142486"  # Remplace par ton vrai client ID
+DISCORD_CLIENT_SECRET = "NBazmlKbXjQGy3S4-USFUw8d_3Iez647"  # Remplace par ton vrai client secret
+REDIRECT_URI = "https://ton-app.vercel.app/callback"  # Remplace par ton URL Vercel
 
 # Chemin du fichier JSON (dans /tmp car Vercel est en lecture seule)
 DATA_FILE = '/tmp/users.json'
@@ -148,3 +147,9 @@ def handler(request):
     """
     
     return html, 200, {'Content-Type': 'text/html'}
+
+# Ajouter un endpoint pour récupérer les utilisateurs (optionnel)
+@app.route('/api/users', methods=['GET'])
+def get_users():
+    users = load_users()
+    return jsonify(users)
