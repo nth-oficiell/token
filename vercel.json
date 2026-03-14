@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/*.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/auth",
+      "dest": "/api/auth.py"
+    },
+    {
+      "src": "/callback",
+      "dest": "/api/callback.py"
+    }
+  ],
+  "env": {
+    "DISCORD_CLIENT_ID": "@discord_client_id",
+    "DISCORD_CLIENT_SECRET": "@discord_client_secret",
+    "BOT_TOKEN": "@bot_token",
+    "DATABASE_URL": "@database_url"
+  }
+}
