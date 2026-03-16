@@ -5,15 +5,5 @@
       "src": "api/*.py",
       "use": "@vercel/python"
     }
-  ],
-  "routes": [
-    {
-      "src": "/auth",
-      "dest": "/api/auth.py"
-    },
-    {
-      "src": "/callback",
-      "dest": "/api/callback.py"
-    }
   ]
 }
